@@ -14,6 +14,8 @@ import TestimonialCardTwo from '@/components/sections/testimonial/TestimonialCar
 import TextSplitAbout from '@/components/sections/about/TextSplitAbout';
 
 export default function LandingPage() {
+  const appointmentUrl = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3iugZdPedlv7LJH4eE1rh7JCDilqWwb00vNe06a_KJEcDdCYcX0n97v2tMCWzAgJbyjRv1SHra";
+
   return (
     <ThemeProvider
         defaultButtonVariant="text-shift"
@@ -50,7 +52,9 @@ export default function LandingPage() {
       description="Experience professional aesthetic treatments tailored to your unique radiance in our luxury sanctuary."
       buttons={[
         {
-          text: "Book Consultation",          href: "#contact"},
+          text: "Book Appointment",          href: appointmentUrl,
+          onClick: () => window.open(appointmentUrl, '_blank', 'noopener,noreferrer')
+        },
       ]}
       imageSrc="http://img.b2bpic.net/free-photo/beautiful-stylish-white-office-successful-doctor_8353-9587.jpg"
       imageAlt="luxury aesthetic salon interior"
@@ -93,6 +97,9 @@ export default function LandingPage() {
       ]}
       title="Signature Services"
       description="Premium treatments crafted to rejuvenate, contour, and revitalize your natural self."
+      buttons={[
+          { text: "Book Appointment", href: appointmentUrl, onClick: () => window.open(appointmentUrl, '_blank', 'noopener,noreferrer') }
+      ]}
     />
   </div>
 
@@ -107,7 +114,7 @@ export default function LandingPage() {
             "Consultation",            "HydraFacial"],
           buttons: [
             {
-              text: "Select"},
+              text: "Book Appointment", href: appointmentUrl, onClick: () => window.open(appointmentUrl, '_blank', 'noopener,noreferrer')},
           ],
         },
         {
@@ -115,7 +122,7 @@ export default function LandingPage() {
             "Full Consultation",            "Filler Treatment",            "Follow-up"],
           buttons: [
             {
-              text: "Select"},
+              text: "Book Appointment", href: appointmentUrl, onClick: () => window.open(appointmentUrl, '_blank', 'noopener,noreferrer')},
           ],
         },
         {
@@ -123,7 +130,7 @@ export default function LandingPage() {
             "Full Face Contour",            "Laser Therapy",            "Priority Booking"],
           buttons: [
             {
-              text: "Select"},
+              text: "Book Appointment", href: appointmentUrl, onClick: () => window.open(appointmentUrl, '_blank', 'noopener,noreferrer')},
           ],
         },
       ]}
@@ -139,18 +146,12 @@ export default function LandingPage() {
       gridVariant="three-columns-all-equal-width"
       useInvertedBackground={false}
       products={[
-        {
-          id: "1",          name: "Lip Contouring",          price: "Before/After",          imageSrc: "http://img.b2bpic.net/free-photo/front-view-beautiful-bride-with-makeup_23-2149640928.jpg",          imageAlt: "lip filler result before after"},
-        {
-          id: "2",          name: "Skin Renewal",          price: "Before/After",          imageSrc: "http://img.b2bpic.net/free-photo/close-up-portrait-woman-with-hydrated-skin_23-2149432234.jpg",          imageAlt: "glowing healthy skin result"},
-        {
-          id: "3",          name: "Facial Sculpting",          price: "Before/After",          imageSrc: "http://img.b2bpic.net/free-photo/close-up-hands-giving-injection-young-woman_23-2149350081.jpg",          imageAlt: "facial contouring procedure result"},
-        {
-          id: "4",          name: "Laser Treatment",          price: "Before/After",          imageSrc: "http://img.b2bpic.net/free-photo/portrait-gorgeous-woman-massaging-her-face-using-jade-roller_23-2149229388.jpg",          imageAlt: "laser skin treatment result"},
-        {
-          id: "5",          name: "Volume Restore",          price: "Before/After",          imageSrc: "http://img.b2bpic.net/free-photo/gentle-soft-indoor-portrait-woman-beige-blazer-with-yellow-flower-mount_343596-3227.jpg",          imageAlt: "facial volume restoration result"},
-        {
-          id: "6",          name: "Glow Infusion",          price: "Before/After",          imageSrc: "http://img.b2bpic.net/free-photo/portrait-woman-after-face-surgery-with-lighting-cross_633478-630.jpg",          imageAlt: "glowing skin infusion result"},
+        { id: "1", name: "Lip Contouring", price: "Before/After", imageSrc: "http://img.b2bpic.net/free-photo/front-view-beautiful-bride-with-makeup_23-2149640928.jpg", imageAlt: "lip filler result before after", priceButtonProps: { text: "Book", onClick: () => window.open(appointmentUrl, '_blank', 'noopener,noreferrer') } },
+        { id: "2", name: "Skin Renewal", price: "Before/After", imageSrc: "http://img.b2bpic.net/free-photo/close-up-portrait-woman-with-hydrated-skin_23-2149432234.jpg", imageAlt: "glowing healthy skin result", priceButtonProps: { text: "Book", onClick: () => window.open(appointmentUrl, '_blank', 'noopener,noreferrer') } },
+        { id: "3", name: "Facial Sculpting", price: "Before/After", imageSrc: "http://img.b2bpic.net/free-photo/close-up-hands-giving-injection-young-woman_23-2149350081.jpg", imageAlt: "facial contouring procedure result", priceButtonProps: { text: "Book", onClick: () => window.open(appointmentUrl, '_blank', 'noopener,noreferrer') } },
+        { id: "4", name: "Laser Treatment", price: "Before/After", imageSrc: "http://img.b2bpic.net/free-photo/portrait-gorgeous-woman-massaging-her-face-using-jade-roller_23-2149229388.jpg", imageAlt: "laser skin treatment result", priceButtonProps: { text: "Book", onClick: () => window.open(appointmentUrl, '_blank', 'noopener,noreferrer') } },
+        { id: "5", name: "Volume Restore", price: "Before/After", imageSrc: "http://img.b2bpic.net/free-photo/gentle-soft-indoor-portrait-woman-beige-blazer-with-yellow-flower-mount_343596-3227.jpg", imageAlt: "facial volume restoration result", priceButtonProps: { text: "Book", onClick: () => window.open(appointmentUrl, '_blank', 'noopener,noreferrer') } },
+        { id: "6", name: "Glow Infusion", price: "Before/After", imageSrc: "http://img.b2bpic.net/free-photo/portrait-woman-after-face-surgery-with-lighting-cross_633478-630.jpg", imageAlt: "glowing skin infusion result", priceButtonProps: { text: "Book", onClick: () => window.open(appointmentUrl, '_blank', 'noopener,noreferrer') } },
       ]}
       title="Transformation Gallery"
       description="Real results from our satisfied clients."
@@ -163,19 +164,15 @@ export default function LandingPage() {
       textboxLayout="default"
       useInvertedBackground={true}
       testimonials={[
-        {
-          id: "t1",          name: "Alice M.",          role: "Client",          testimonial: "The best aesthetic salon I have ever visited. Truly life-changing results.",          imageSrc: "http://img.b2bpic.net/free-photo/skin-nude-eyebrows-harmony-face_1304-911.jpg",          imageAlt: "happy beauty client portrait"},
-        {
-          id: "t2",          name: "Sarah P.",          role: "Client",          testimonial: "Expert team, clean facility, and amazing attention to detail.",          imageSrc: "http://img.b2bpic.net/free-photo/women-making-preparations-wedding_23-2149184347.jpg",          imageAlt: "confident woman beauty salon"},
-        {
-          id: "t3",          name: "Elena V.",          role: "Client",          testimonial: "So pleased with my results. Highly recommend!",          imageSrc: "http://img.b2bpic.net/free-photo/portrait-beautiful-blue-eyed-female-with-gym-outfit_181624-14551.jpg",          imageAlt: "satisfied aesthetic salon user"},
-        {
-          id: "t4",          name: "Megan D.",          role: "Client",          testimonial: "Professional, kind, and incredibly skilled. A gem.",          imageSrc: "http://img.b2bpic.net/free-photo/fashion-portrait-european-blonde-woman-silk-white-summer-romantic-dress-golden-bracelet-earrings_343596-1776.jpg",          imageAlt: "confident happy customer portrait"},
-        {
-          id: "t5",          name: "Chloe S.",          role: "Client",          testimonial: "Transformed my skin completely in just a few visits.",          imageSrc: "http://img.b2bpic.net/free-photo/front-view-cute-girl-looking-away_23-2148436134.jpg",          imageAlt: "portrait of satisfied young client"},
+        { id: "t1", name: "Alice M.", role: "Client", testimonial: "The best aesthetic salon I have ever visited. Truly life-changing results.", imageSrc: "http://img.b2bpic.net/free-photo/skin-nude-eyebrows-harmony-face_1304-911.jpg", imageAlt: "happy beauty client portrait" },
+        { id: "t2", name: "Sarah P.", role: "Client", testimonial: "Expert team, clean facility, and amazing attention to detail.", imageSrc: "http://img.b2bpic.net/free-photo/women-making-preparations-wedding_23-2149184347.jpg", imageAlt: "confident woman beauty salon" },
+        { id: "t3", name: "Elena V.", role: "Client", testimonial: "So pleased with my results. Highly recommend!", imageSrc: "http://img.b2bpic.net/free-photo/portrait-beautiful-blue-eyed-female-with-gym-outfit_181624-14551.jpg", imageAlt: "satisfied aesthetic salon user" },
+        { id: "t4", name: "Megan D.", role: "Client", testimonial: "Professional, kind, and incredibly skilled. A gem.", imageSrc: "http://img.b2bpic.net/free-photo/fashion-portrait-european-blonde-woman-silk-white-summer-romantic-dress-golden-bracelet-earrings_343596-1776.jpg", imageAlt: "confident happy customer portrait" },
+        { id: "t5", name: "Chloe S.", role: "Client", testimonial: "Transformed my skin completely in just a few visits.", imageSrc: "http://img.b2bpic.net/free-photo/front-view-cute-girl-looking-away_23-2148436134.jpg", imageAlt: "portrait of satisfied young client" },
       ]}
       title="Client Stories"
       description="Hear what our clients have to say about their experience."
+      buttons={[{ text: "Book Appointment", href: appointmentUrl, onClick: () => window.open(appointmentUrl, '_blank', 'noopener,noreferrer') }]}
     />
   </div>
 
@@ -194,6 +191,7 @@ export default function LandingPage() {
       title="Common Questions"
       description="Find answers to frequently asked questions about our treatments."
       faqsAnimation="slide-up"
+      buttons={[{ text: "Book Appointment", href: appointmentUrl, onClick: () => window.open(appointmentUrl, '_blank', 'noopener,noreferrer') }]}
     />
   </div>
 
@@ -205,7 +203,7 @@ export default function LandingPage() {
       text="Ready to begin your journey?"
       buttons={[
         {
-          text: "Send Message",          href: "#"},
+          text: "Book Appointment", href: appointmentUrl, onClick: () => window.open(appointmentUrl, '_blank', 'noopener,noreferrer')},
       ]}
     />
   </div>
@@ -226,7 +224,7 @@ export default function LandingPage() {
             {
               label: "About",              href: "#about"},
             {
-              label: "Contact",              href: "#contact"},
+              label: "Book Appointment", href: appointmentUrl, onClick: () => window.open(appointmentUrl, '_blank', 'noopener,noreferrer') },
           ],
         },
       ]}
