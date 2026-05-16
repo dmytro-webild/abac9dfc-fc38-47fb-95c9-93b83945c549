@@ -112,7 +112,7 @@ export default function LandingPage() {
       useInvertedBackground={true}
       plans={[
         {
-          id: "p1",          name: "Basic Glow",          price: "$150",          features: [
+          id: "p1",          name: "Basic Glow",          price: "Rs. 99,000",          features: [
             "Consultation",            "HydraFacial"],
           buttons: [
             {
@@ -120,7 +120,7 @@ export default function LandingPage() {
           ],
         },
         {
-          id: "p2",          name: "Signature Lift",          price: "$450",          features: [
+          id: "p2",          name: "Signature Lift",          price: "Rs. 12,000 ",          features: [
             "Full Consultation",            "Filler Treatment",            "Follow-up"],
           buttons: [
             {
@@ -128,7 +128,7 @@ export default function LandingPage() {
           ],
         },
         {
-          id: "p3",          name: "Total Renew",          price: "$800",          features: [
+          id: "p3",          name: "Total Renew",          price: "Rs. 8,000",          features: [
             "Full Face Contour",            "Laser Therapy",            "Priority Booking"],
           buttons: [
             {
