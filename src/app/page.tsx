@@ -24,8 +24,8 @@ export default function LandingPage() {
         contentWidth="small"
         sizing="large"
         background="none"
-        cardStyle="subtle-shadow"
-        primaryButtonStyle="flat"
+        cardStyle="glass-elevated"
+        primaryButtonStyle="shadow"
         secondaryButtonStyle="glass"
         headingFontWeight="extrabold"
     >
@@ -50,6 +50,8 @@ export default function LandingPage() {
       <HeroOverlay
       title="Redefine Your Beauty"
       description="Experience professional aesthetic treatments tailored to your unique radiance in our luxury sanctuary."
+      titleClassName="text-white drop-shadow-lg"
+      descriptionClassName="text-slate-100 drop-shadow-md"
       buttons={[
         {
           text: "Book Appointment",          href: appointmentUrl,
